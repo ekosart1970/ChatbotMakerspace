@@ -2,12 +2,32 @@ version: "3.1"
 
 rules:
 
-- rule: Say goodbye anytime the user says goodbye
+- rule: "Say goodbye anytime the user says goodbye"
   steps:
   - intent: goodbye
   - action: utter_goodbye
 
-- rule: Say 'I am a bot' anytime the user challenges
+- rule: "Sage 'Auf Wiedersehen' immer, wenn der Benutzer sich verabschiedet und 'Tschüss' sagt"
+  steps:
+  - intent: verabschiedung
+  - action: utter_auf_wiedersehen
+
+- rule: "Say 'I am a bot' anytime the user challenges"
   steps:
   - intent: bot_challenge
   - action: utter_iamabot
+
+- rule: "Sage 'Ich bin ein Bot' immer, wenn der Benutzer eine Herausforderung ausspricht"
+  steps:
+  - intent: bot_challenge_de
+  - action: utter_ich_bin_ein_bot
+
+- rule: "fallback"
+  steps:
+  - intent: nlu_fallback
+  - action: utter_default
+
+- rule: "Fallback auf Deutsch"
+  steps:
+  - intent: nlu_fallback_de
+  - action: utter_allgemeine_antwort

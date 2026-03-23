@@ -11,6 +11,7 @@ intents:
   - tell_name
   - begrüßung
   - verabschiedung
+  - bestätigung
   - verneinung
   - mood_begeistert
   - mood_unglücklich
@@ -58,6 +59,7 @@ responses:
   - text: "That is great {name}, carry on!"
   - text: "That is wonderful {name}, carry on!"
   - text: "That is fantastic, carry on!"
+  - text: "That is fantastic. Share your happiness with the world!"
 
 
   utter_hat_es_dir_geholfen:
@@ -72,6 +74,8 @@ responses:
   - text: "Das ist großartig {name}, mach weiter so!"
   - text: "Das ist wunderbar {name}, mach weiter so!"
   - text: "Ich freue mich, dass es dir wieder gut geht {name}!"
+  - text: "Das ist fantastisch. Teile deine Freude mit der Welt!"
+  - text: "Das ist großartig {name}, sei dankbar und trage deine Freude weiter!"
 
   utter_goodbye:
   - text: "Bye"
@@ -101,53 +105,38 @@ responses:
   - text: "Ich bin ein Bot von Rasa. Ich bin hier, um dich aufzumuntern {name}! Wenn du mit mir reden möchtest, frag mich einfach Irgendetwas, oder verrate mir deinen Namen!"  
   - text: "Ich bin ein Bot von Rasa. Ich freue mich, von dir zu lesen!"
 
-utter_happy:
-  - text: "Great, carry on!"
-  - text: "That is great {name}, carry on!"
-  - text: "That is wonderful {name}, carry on!"
-  - text: "That is fantastic. Share your happiness with the world!" 
 
-utter_glücklich:
-  - text: "Super, mach weiter so!"
-  - text: "Das freut mich, mach weiter so!"
-  - text: "Das ist großartig {name}, mach weiter so!"
-  - text: "Das ist wunderbar {name}, mach weiter so!"
-  - text: "Ich freue mich, dass es dir wieder gut geht {name}!"   
-  - text: "Das ist fantastisch. Teile deine Freude mit der Welt!"
-  - text: "Das ist großartig {name}, sei dankbar und trage deine Freude weiter!"
-
-utter_ask_name:
+  utter_ask_name:
   - text: "Hi, what's your name?"
   - text: "Hi my name ist Eva's Chatbot, what's your name?"
 
-utter_frage_name:
+  utter_frage_name:
   - text: "Wie heißt du?"
   - text: "Hallo, ich bin Evas Chatbot, wie heißt du?"
   - text: "Hallo, ich bin einer von tausend Chatbots, verräts du mir deinen Namen?"
   
-utter_ask_sports:
+  utter_ask_sports:
   - text: "{name} do you like to do sports?"
   - text: "{name}. What is your favorite sport?"
   
-utter_frage_sport:
+  utter_frage_sport:
   - text: "{name} treibst du gerne Sport?"
   - text: "{name}. Welche Sportart magst du am liebsten?"
   - text: "{name}. Was ist deine Lieblingssportart?"
 
-utter_go_walk:
+  utter_go_walk:
   - text: "So, {name}, why don't you just go out for a walk?"
   - text: "A little fresh air might do you some good, right? How about a walk, {name}?"
 
-utter_geh_spazieren:
+  utter_geh_spazieren:
   - text: "Also, {name}, wie wäre es mit einem Spaziergang an der frischen Luft?"
-  - text: >-
-      Ein bisschen frische Luft könnte dir gut tun, oder? Wie wäre es mit einem Spaziergang,
+  - text: "Ein bisschen frische Luft könnte dir gut tun, oder? Wie wäre es mit einem Spaziergang,
       {name}?
 
-utter_default:
+  utter_default:
   - text: "Sorry, I didn't get that, can you rephrase?"
   
-utter_allgemeine_antwort:
+  utter_allgemeine_antwort:
   - text: "Entschuldige, das habe ich nicht verstanden. Kannst du das bitte anders formulieren?"  
   - text: "Entschuldige, ich bin noch in der Lernphase. Kannst du das bitte anders formulieren?" 
 
