@@ -232,5 +232,24 @@ nlu:
     - Can you understand me?
     - Verstehst du mich?
     - Do you understand me?
-    
 
+
+- intent: tell_name
+  examples: |
+    - my name is [Max](name)
+    - I am [Alina](name)
+    - I'm [Mateusz](name)
+    - [Irene](name)
+    - Mein Name ist [Maximilian](name)
+    - Ich bin [Sarah](name)
+    - Ich heiße [Leo](name)
+    - Du kannst mich [Bubu](name) nennen
+    - Du darfst mich [Michi](name) nennen
+    - Ich bin's [Dorothea](name)
+    - Meine Freunde nennen mich [Lissi](name)
+    - Ich bin es [Eva](name)
+    - Sie nennen mich [Minimaus](name)
+    - [Julia](name)
+    - [Irene](name) hier
+    - Hallo, ich bin [Alex](name)
+    - Hi, ich bin [Maria](name)
