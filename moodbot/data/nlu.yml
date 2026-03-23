@@ -20,6 +20,9 @@ nlu:
     - nice to meet you
     - howdy
     - yo
+
+- intent: begrüßung
+  examples: |
     - Hallo
     - Guten Tag
     - Moin
@@ -32,6 +35,9 @@ nlu:
     - Schön dich zu sehen
     - Schön dich zu treffen
     - Hallo da drübern
+    - Halli Hallo
+    - Einen wunderschönen Guten Tag
+    - 
 
 
 - intent: goodbye
@@ -46,6 +52,9 @@ nlu:
     - see you around
     - bye bye
     - see you later
+
+- intent: verabschiedung
+  examples: |
     - Gute Nacht
     - Auf Wiedersehen
     - Tschüss
@@ -74,6 +83,22 @@ nlu:
     - of course
     - that sounds good
     - correct
+    - right
+    - exact
+    - absolutely
+    - certainly
+    - definitely
+    - sure
+    - clearly
+    - obviously
+    - that's right
+    - yes, of course
+    - yes, that sounds good
+    - yes, correct
+    - yes, right
+
+- intent: bestätigung
+  examples: |
     - Ja
     - Genau
     - Richtig
@@ -108,6 +133,14 @@ nlu:
     - don't like that
     - no way
     - not really
+    - no, really
+    - no, not really
+    - no, not at all
+    - no, not at all
+    - no, not really
+
+- intent: verneinung
+  examples: |
     - Nein
     - Nein, das denke ich nicht
     - Nein, das mag ich nicht
@@ -152,6 +185,9 @@ nlu:
     - so so perfect
     - so good
     - so perfect
+
+- intent: mood_großartig
+  examples: |    
     - perfekt
     - großartig
     - wunderbar
@@ -186,6 +222,10 @@ nlu:
     - extremly sad
     - so saad
     - so sad
+
+- intent: mood_unglücklich
+  examples: |
+    - Mein Tag war schrecklich
     - Ich bin traurig
     - Ich fühle mich nicht so gut
     - Ich bin enttäuscht
@@ -218,6 +258,9 @@ nlu:
     - are you a human?
     - am I talking to a bot?
     - am I talking to a human?
+
+- intent: bot_challenge_de
+  examples: |       
     - bist du ein Bot?
     - bist du ein Mensch?
     - Rede ich mit einem Bot?
@@ -240,6 +283,12 @@ nlu:
     - I am [Alina](name)
     - I'm [Mateusz](name)
     - [Irene](name)
+    - [Julia](name) here
+    - Hi, I'm [Alex](name)
+    - Hi, my name is [Maria](name)
+
+- intent: tell_name_de
+  examples: |   
     - Mein Name ist [Maximilian](name)
     - Ich bin [Sarah](name)
     - Ich heiße [Leo](name)

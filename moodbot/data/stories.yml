@@ -2,12 +2,31 @@ version: "3.1"
 
 stories:
 
-- story: happy path
+- story: "intro"
   steps:
   - intent: greet
-  - action: utter_greet
+  - action: utter_ask_name
+  - intent: tell_name
+  - action: utter_greet 
+
+- story: "intro_de"
+  steps:
+  - intent: begrüßung
+  - action: utter_frage_name
+  - intent: tell_name_de
+  - action: utter_gruß 
+
+- story: "user is happy"
+  steps:
   - intent: mood_great
   - action: utter_happy
+  - action: utter_goodbye
+
+- story: "Benutzer ist glücklich"
+  steps:
+  - intent: mood_begeistert
+  - action: utter_glücklich
+  - action: utter_verabschiedung  
 
 - story: sad path 1
   steps:
@@ -19,6 +38,16 @@ stories:
   - intent: affirm
   - action: utter_happy
 
+- story: trauriger Pfad 1
+  steps:
+  - intent: begrüßung
+  - action: utter_gruß
+  - intent: mood_unglücklich
+  - action: utter_aufmuntern
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_glücklich  
+
 - story: sad path 2
   steps:
   - intent: greet
@@ -28,3 +57,13 @@ stories:
   - action: utter_did_that_help
   - intent: deny
   - action: utter_goodbye
+
+- story: trauriger Pfad 2
+  steps:
+  - intent: begrüßung
+  - action: utter_gruß
+  - intent: mood_unglücklich
+  - action: utter_aufmuntern
+  - action: utter_hat_das_geholfen
+  - intent: verneinung
+  - action: utter_verabschiedung

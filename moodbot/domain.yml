@@ -9,6 +9,13 @@ intents:
   - mood_unhappy
   - bot_challenge
   - tell_name
+  - begrüßung
+  - verabschiedung
+  - verneinung
+  - mood_begeistert
+  - mood_unglücklich
+  - bot_challenge_de
+  - tell_name_de
 
 entities:
   - name
