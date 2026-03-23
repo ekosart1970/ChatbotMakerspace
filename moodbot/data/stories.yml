@@ -67,3 +67,96 @@ stories:
   - action: utter_hat_das_geholfen
   - intent: verneinung
   - action: utter_verabschiedung
+
+- story: "sad sporty guy, cheered up by sports"
+  steps:
+    - intent: mood_unhappy
+    - action: utter_ask_sports
+    - intent: affirm
+    - action: utter_go_walk
+    - action: utter_did_that_help
+    - intent: affirm
+    - action: utter_happy
+    - action: utter_goodbye
+
+- story: "trauriger sportlicher Typ, aufgemuntert durch Sport"
+  steps:
+    - intent: mood_unglücklich
+    - action: utter_frage_sport
+    - intent: bestätigung
+    - action: utter_geh_spazieren
+    - action: utter_hat_es_dir_geholfen
+    - intent: bestätigung
+    - action: utter_glücklich
+    - action: utter_verabschiedung  
+
+- story: "sad sporty guy, not cheered up by sports, finally happy"
+  steps:
+    - intent: mood_unhappy
+    - action: utter_ask_sports
+    - intent: affirm
+    - action: utter_go_walk
+    - action: utter_did_that_help
+    - intent: deny
+    - action: utter_cheer_up
+    - action: utter_did_that_help
+    - intent: affirm
+    - action: utter_happy
+    - action: utter_goodbye
+
+- story: "trauriger sportlicher Typ, nicht aufgemuntert durch Sport, schließlich glücklich"
+  steps:
+    - intent: mood_unglücklich
+    - action: utter_frage_sport
+    - intent: bestätigung
+    - action: utter_geh_spazieren
+    - action: utter_hat_es_dir_geholfen
+    - intent: verneinung
+    - action: utter_aufmuntern
+    - action: utter_hat_es_dir_geholfen
+    - intent: bestätigung
+    - action: utter_glücklich
+    - action: utter_verabschiedung  
+
+- story: "sad unsporty guy is happy"
+  steps:
+    - intent: mood_unhappy
+    - action: utter_ask_sports
+    - intent: deny
+    - action: utter_cheer_up
+    - action: utter_did_that_help
+    - intent: affirm
+    - action: utter_happy
+    - action: utter_goodbye
+
+- story: "trauriger unsportlicher Typ ist glücklich"
+  steps:
+    - intent: mood_unglücklich
+    - action: utter_frage_sport
+    - intent: verneinung
+    - action: utter_aufmuntern
+    - action: utter_hat_es_dir_geholfen
+    - intent: bestätigung
+    - action: utter_glücklich
+    - action: utter_verabschiedung
+
+- story: "sad, hopeless"
+  steps:
+    - intent: mood_unhappy
+    - action: utter_ask_sports
+    - intent: deny
+    - action: utter_cheer_up
+    - action: utter_did_that_help
+    - intent: deny
+    - action: utter_goodbye
+
+
+- story: "trauriger, hoffnungsloser Typ"
+  steps:
+    - intent: mood_unglücklich
+    - action: utter_frage_sport
+    - intent: verneinung
+    - action: utter_aufmuntern
+    - action: utter_hat_es_dir_geholfen
+    - intent: verneinung
+    - action: utter_verabschiedung  
