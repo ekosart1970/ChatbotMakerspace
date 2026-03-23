@@ -16,6 +16,23 @@ nlu:
     - goodmorning
     - goodevening
     - good afternoon
+    - nice to see you
+    - nice to meet you
+    - howdy
+    - yo
+    - Hallo
+    - Guten Tag
+    - Moin
+    - Servus
+    - Grüß Gott
+    - Guten Abend
+    - Guten Morgen
+    - Mahlzeit
+    - Los geht's
+    - Schön dich zu sehen
+    - Schön dich zu treffen
+    - Hallo da drübern
+
 
 - intent: goodbye
   examples: |
@@ -29,6 +46,25 @@ nlu:
     - see you around
     - bye bye
     - see you later
+    - Gute Nacht
+    - Auf Wiedersehen
+    - Tschüss
+    - Bis später
+    - Bis bald
+    - Bis dann
+    - Einen Schönen Tag
+    - Einen schönen Abend
+    - Schönen Feierabend
+    - Schönen Tag noch
+    - Gute Nacht
+    - Tschüssi
+    - Ciao
+    - Eine geruhsame Nacht
+    - Mach's gut
+    - Bis zum nächsten Mal
+    - Schlaf gut
+    - Bis Morgen
+
 
 - intent: affirm
   examples: |
@@ -38,6 +74,30 @@ nlu:
     - of course
     - that sounds good
     - correct
+    - Ja
+    - Genau
+    - Richtig
+    - Das klingt gut
+    - Natürlich
+    - Stimmt
+    - Absolut
+    - Auf jeden Fall
+    - Sicher
+    - Klar
+    - Selbstverständlich
+    - Definitiv
+    - Ja, genau
+    - Ja, das klingt gut
+    - Ja, natürlich
+    - Ja, stimmt
+    - Ja, absolut
+    - Ja, auf jeden Fall
+    - Ja, sicher
+    - Ja, klar
+    - Ja, selbstverständlich
+    - Ja, definitiv
+    - Genau, das klingt gut
+
 
 - intent: deny
   examples: |
@@ -48,6 +108,33 @@ nlu:
     - don't like that
     - no way
     - not really
+    - Nein
+    - Nein, das denke ich nicht
+    - Nein, das mag ich nicht
+    - Nein, auf keinen Fall
+    - Nein, wirklich nicht
+    - Nein, nicht wirklich
+    - Nein, auf keinen Fall
+    - Ach, nee
+    - Auf keinen Fall
+    - Niemals
+    - Lass es sein
+    - Nein, lass es sein
+    - Nein, lass es bleiben
+    - Lass es
+    - Nope
+    - Ich denke nicht
+    - Ich glaube nicht
+    - Das mag ich nicht
+    - Das gefällt mir nicht
+    - Das will ich nicht
+    - Das ist nicht gut
+    - Das ist nicht richtig
+    - Das ist nicht so toll
+    - Das ist nicht so gut
+    - Das ist so nicht richtig
+    - Das gefällt mir noch nicht
+
 
 - intent: mood_great
   examples: |
@@ -65,6 +152,23 @@ nlu:
     - so so perfect
     - so good
     - so perfect
+    - perfekt
+    - großartig
+    - wunderbar
+    - wirklich toll
+    - fantastisch
+    - super
+    - sehr gut
+    - du bist gut
+    - das ist toll
+    - das ist super
+    - das ist großartig
+    - das ist wunderbar
+    - ich fühle mich extrem gut
+    - ich bin heute gut drauf
+    - ich fühle mich heute großartig
+    - ich habe heute gut geschlafen
+ 
 
 - intent: mood_unhappy
   examples: |
@@ -82,6 +186,31 @@ nlu:
     - extremly sad
     - so saad
     - so sad
+    - Ich bin traurig
+    - Ich fühle mich nicht so gut
+    - Ich bin enttäuscht
+    - Ich bin super traurig
+    - Ich bin so traurig
+    - Ich bin sehr traurig
+    - Ich bin unglücklich
+    - Das ist nicht gut
+    - Das ist nicht so gut
+    - Heute ist nicht mein Tag
+    - Heute geht es mir nicht so gut
+    - Ein schreklicheer Morgen
+    - Ich habe schleecht geträumt
+    - Ich habe schlecht geschlafen
+    - Ein Alptraum
+    - Es ist frustrierend
+    - Es ist ärgerlich
+    - Es ist enttäuschend
+    - Ich bin müde
+    - Ich bin erschöpft
+    - Ich bin gestresst
+    - Ich bin überfordert
+    - Ich bin genervt
+    - Ich bin wütend
+    - Ich bin sauer
 
 - intent: bot_challenge
   examples: |
@@ -89,3 +218,19 @@ nlu:
     - are you a human?
     - am I talking to a bot?
     - am I talking to a human?
+    - bist du ein Bot?
+    - bist du ein Mensch?
+    - Rede ich mit einem Bot?
+    - Rede ich mit einem Menschen?
+    - Sprichst du auch deutsch?
+    - Do you speak german?
+    - Kannst du deutsch?
+    - Can you speak german?
+    - Kannst du auch Deutsch sprechen?
+    - Do you also speak german?
+    - Kannst du mich verstehen?
+    - Can you understand me?
+    - Verstehst du mich?
+    - Do you understand me?
+    
+
