@@ -130,12 +130,12 @@ responses:
 
   utter_geh_spazieren:
   - text: "Also, {name}, wie wäre es mit einem Spaziergang an der frischen Luft?"
-  - text: "Ein bisschen frische Luft könnte dir gut tun, oder? Wie wäre es mit einem Spaziergang,
-      {name}?
+  - text: "Ein bisschen frische Luft könnte dir gut tun, oder? Wie wäre es mit einem Spaziergang,{name}?"
 
   utter_default:
   - text: "Sorry, I didn't get that, can you rephrase?"
-  
+
+
   utter_allgemeine_antwort:
   - text: "Entschuldige, das habe ich nicht verstanden. Kannst du das bitte anders formulieren?"  
   - text: "Entschuldige, ich bin noch in der Lernphase. Kannst du das bitte anders formulieren?" 

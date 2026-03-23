@@ -26,7 +26,7 @@ stories:
   steps:
   - intent: mood_begeistert
   - action: utter_glücklich
-  - action: utter_verabschiedung  
+  - action: utter_auf_wiedersehen  
 
 - story: sad path 1
   steps:
@@ -66,7 +66,7 @@ stories:
   - action: utter_aufmuntern
   - action: utter_hat_das_geholfen
   - intent: verneinung
-  - action: utter_verabschiedung
+  - action: utter_auf_wiedersehen
 
 - story: "sad sporty guy, cheered up by sports"
   steps:
@@ -88,7 +88,7 @@ stories:
     - action: utter_hat_es_dir_geholfen
     - intent: bestätigung
     - action: utter_glücklich
-    - action: utter_verabschiedung  
+    - action: utter_auf_wiedersehen  
 
 - story: "sad sporty guy, not cheered up by sports, finally happy"
   steps:
@@ -116,7 +116,7 @@ stories:
     - action: utter_hat_es_dir_geholfen
     - intent: bestätigung
     - action: utter_glücklich
-    - action: utter_verabschiedung  
+    - action: utter_auf_wiedersehen  
 
 - story: "sad unsporty guy is happy"
   steps:
@@ -138,7 +138,7 @@ stories:
     - action: utter_hat_es_dir_geholfen
     - intent: bestätigung
     - action: utter_glücklich
-    - action: utter_verabschiedung
+    - action: utter_auf_wiedersehen
 
 - story: "sad, hopeless"
   steps:
@@ -159,4 +159,4 @@ stories:
     - action: utter_aufmuntern
     - action: utter_hat_es_dir_geholfen
     - intent: verneinung
-    - action: utter_verabschiedung  
+    - action: utter_auf_wiedersehen  
