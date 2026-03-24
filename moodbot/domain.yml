@@ -38,26 +38,34 @@ responses:
   utter_cheer_up:
   - text: "Here is something to cheer you up:"
   - text: "I'm a chatbot that cheers people up {name}. Here is something to cheer you up. Keep your head up!"
+  - text: "I'm a chatbot that cheers people up. Here is something to cheer you up. Keep your head up!"
     image: "https://i.imgur.com/iPa8HCj.jpeg"
 
   utter_gruß:
   - text: "Grüß Gott! Wie geht's dir?"
   - text: "Hallo {name}! Wie geht's dir?"
+  - text: "Hallo! Wie geht's dir?"
 
   utter_aufmuntern: 
   - text: "Hier ist etwas, um dich aufzumuntern:"
   - text: "Ich bin ein Chatbot, der Menschen aufmuntert {name}. Hier ist etwas, um dich aufzumuntern. Kopf hoch!"
+  - text: "Ich bin ein Chatbot, der Menschen aufmuntert. Hier ist etwas, um dich aufzumuntern. Kopf hoch!"  
     image: "https://i.imgur.com/iPa8HCj.jpeg" 
 
   utter_did_that_help:
   - text: "Did that help you?"
   - text: "Did that help you a little bit?"
   - text: "Might this cheer you up {name}?"
+  - text: "Might this cheer you up a little bit {name}?"
+  - text: "Might this cheer you up a little bit?"
+  - text: "Might this cheer you up?"
 
   utter_happy:
   - text: "Great, carry on!"
   - text: "That is great {name}, carry on!"
+  - text: "that is great, carry on!"
   - text: "That is wonderful {name}, carry on!"
+  - text: "That is wonderful, carry on!"
   - text: "That is fantastic, carry on!"
   - text: "That is fantastic. Share your happiness with the world!"
 
@@ -66,43 +74,61 @@ responses:
   - text: "Hat dir das geholfen?"
   - text: "Hat dir das ein bisschen geholfen?" 
   - text: "Hat dich das ein bisschen aufgemuntert {name}?"
+  - text: "Hat dich das ein bisschen aufgemuntert?"
   - text: "Hat dich das ein bisschen fröhlicher gemacht {name}?"
+  - text: "Hat dich das ein bisschen fröhlicher gemacht?"
 
   utter_glücklich:
   - text: "Super, mach weiter so!"
   - text: "Das freut mich, mach weiter so!"
   - text: "Das ist großartig {name}, mach weiter so!"
+  - text: "Das ist großartig, mach weiter so!"
   - text: "Das ist wunderbar {name}, mach weiter so!"
+  - text: "Das ist wunderbar, mach weiter so!"
   - text: "Ich freue mich, dass es dir wieder gut geht {name}!"
+  - text: "Ich freue mich, dass es dir wieder gut geht!"
   - text: "Das ist fantastisch. Teile deine Freude mit der Welt!"
   - text: "Das ist großartig {name}, sei dankbar und trage deine Freude weiter!"
+  - text: "Das ist großartig, sei dankbar und trage deine Freude weiter!"
 
   utter_goodbye:
   - text: "Bye"
   - text: "Goodbye {name}!"
+  - text: "Goodbye!"
   - text: "See you later {name}!"
+  - text: "See you later!"
   - text: "Have a nice day!"
   - text: "Goodbye {name}. I'm here for you! See you soon!"
+  - text: "Goodbye. I'm here for you! See you soon!"
   - text: "Goodbye {name}. Come back whenever you need a chat. See you!"
+  - text: "Goodbye. Come back whenever you need a chat. See you!"
 
   utter_auf_wiedersehen:
   - text: "Auf Wiedersehen"
   - text: "Tschüss {name}!"
+  - text: "Tschüss!"
   - text: "Bis später {name}!"
+  - text: "Bis später!"
   - text: "Schönen Tag noch!"
   - text: "Auf Wiedersehen {name}. Ich bin hier für dich! Bis bald!"
+  - text: "Auf Wiedersehen. Ich bin hier für dich! Bis bald!"
   - text: "Auf Wiedersehen {name}. Komm zurück, wann immer du jemanden zum Reden brauchst!"
+  - text: "Auf Wiedersehen. Komm zurück, wann immer du jemanden zum Reden brauchst!"
   
 
   utter_iamabot:
   - text: "I am a bot, powered by Rasa."
   - text: "I am a bot, powered by Rasa. I'm here to cheer you up {name}!"
+  - text: "I am a bot, powered by Rasa. I'm here to cheer you up!"
   - text: "I am a bot, powered by Rasa. I'm here to cheer you up {name}! If you want to talk, just ask me how I'm doing or tell me your name!"
+  - text: "I am a bot, powered by Rasa. I'm here to cheer you up! If you want to talk, just ask me how I'm doing or tell me your name!"
 
   utter_ich_bin_ein_bot:
   - text: "Ich bin ein Bot von Rasa."
   - text: "Ich bin ein Bot von Rasa. Ich bin hier, um dich aufzumuntern {name}!"
+  - text: "Ich bin ein Bot von Rasa. Ich bin hier, um dich aufzumuntern!"
   - text: "Ich bin ein Bot von Rasa. Ich bin hier, um dich aufzumuntern {name}! Wenn du mit mir reden möchtest, frag mich einfach Irgendetwas, oder verrate mir deinen Namen!"  
+  - text: "Ich bin ein Bot von Rasa. Ich bin hier, um dich aufzumuntern! Wenn du mit mir reden möchtest, frag mich einfach Irgendetwas, oder verrate mir deinen Namen!"
   - text: "Ich bin ein Bot von Rasa. Ich freue mich, von dir zu lesen!"
 
 
@@ -117,20 +143,31 @@ responses:
   
   utter_ask_sports:
   - text: "{name} do you like to do sports?"
+  - text: "Do you like to do sports?"
   - text: "{name}. What is your favorite sport?"
+  - text: "What sports do you like to do?"
   
   utter_frage_sport:
   - text: "{name} treibst du gerne Sport?"
+  - text: "Treibst du gerne Sport?"
   - text: "{name}. Welche Sportart magst du am liebsten?"
+  - text: "Welche Sportart magst du am liebsten?"
   - text: "{name}. Was ist deine Lieblingssportart?"
+  - text: "Was ist deine Lieblingssportart?"
 
   utter_go_walk:
   - text: "So, {name}, why don't you just go out for a walk?"
+  - text: "So, why don't you just go out for a walk?"
+  - text: "Well, {name}, how about going for a walk?"
+  - text: "Well, how about going for a walk?"
   - text: "A little fresh air might do you some good, right? How about a walk, {name}?"
+  - text: "A little fresh air might do you some good, right? How about a walk?"
 
   utter_geh_spazieren:
   - text: "Also, {name}, wie wäre es mit einem Spaziergang an der frischen Luft?"
+  - text: "Also, wie wäre es mit einem Spaziergang an der frischen Luft?"
   - text: "Ein bisschen frische Luft könnte dir gut tun, oder? Wie wäre es mit einem Spaziergang,{name}?"
+  - text: "Ein bisschen frische Luft könnte dir gut tun, oder? Wie wäre es mit einem Spaziergang?"
 
   utter_default:
   - text: "Sorry, I didn't get that, can you rephrase?"
