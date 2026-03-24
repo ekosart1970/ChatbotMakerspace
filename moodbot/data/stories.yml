@@ -44,8 +44,8 @@ stories:
   - action: utter_gruß
   - intent: mood_unglücklich
   - action: utter_aufmuntern
-  - action: utter_did_that_help
-  - intent: affirm
+  - action: utter_hat_es_dir_geholfen
+  - intent: bestätigung
   - action: utter_glücklich  
 
 - story: sad path 2
@@ -64,7 +64,7 @@ stories:
   - action: utter_gruß
   - intent: mood_unglücklich
   - action: utter_aufmuntern
-  - action: utter_hat_das_geholfen
+  - action: utter_hat_es_dir_geholfen
   - intent: verneinung
   - action: utter_auf_wiedersehen
 
