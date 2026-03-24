@@ -24,6 +24,7 @@ entities:
 slots:
   name:
     type: text
+    initial_value: ""
     influence_conversation: false   
     mappings:
       - type: from_entity
