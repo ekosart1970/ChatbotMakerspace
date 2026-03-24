@@ -136,6 +136,7 @@ responses:
   - text: "Hi, what's your name?"
   - text: "Hi my name ist Eva's Chatbot, what's your name?"
 
+
   utter_frage_name:
   - text: "Wie heißt du?"
   - text: "Hallo, ich bin Evas Chatbot, wie heißt du?"

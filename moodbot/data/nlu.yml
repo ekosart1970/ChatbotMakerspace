@@ -286,6 +286,9 @@ nlu:
     - [Julia](name) here
     - Hi, I'm [Alex](name)
     - Hi, my name is [Maria](name)
+    - I'm [Lissi](name)
+    - My name is [Anita](name), what is your name?
+    - Say [Doro](name) to me.
 
 - intent: tell_name_de
   examples: |   
