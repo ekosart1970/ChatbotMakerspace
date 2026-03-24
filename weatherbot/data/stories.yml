@@ -2,29 +2,55 @@ version: "3.1"
 
 stories:
 
-- story: happy path
+- story: "1"
   steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_great
-  - action: utter_happy
+  - intent: inform_weather
+    entities:
+      - GPE: Kempten
+  - slot_was_set:
+    - location: Kempten 
+  - action: action_weather
+  - action: utter_location
 
-- story: sad path 1
+- story: "2"
   steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: affirm
-  - action: utter_happy
+  - intent: inform_weather
+    entities:
+      - GPE: Stockholm
+  - slot_was_set:
+    - location: Stockholm
+  - action: action_weather
+  - action: utter_location
 
-- story: sad path 2
+- story: "3"
   steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: deny
-  - action: utter_goodbye
+  - intent: inform_weather
+    entities:
+      - GPE: Vienna
+  - slot_was_set:
+    - location: Vienna
+  - action: action_weather
+  - action: utter_location
+
+- story: "4"
+  steps:
+  - intent: inform_weather
+    entities:
+      - GPE: South Africa
+  - slot_was_set:
+    - location: South Africa
+  - action: action_weather
+  - action: utter_location
+
+- story: "5"
+  steps:
+  - intent: inform_weather
+  - action: utter_ask_location
+  - intent: tell_location
+    entities:
+      - GPE: Spain
+  - slot_was_set: 
+    - location: Spain
+  - action: action_weather
+  - action: utter_location
+  
