@@ -13,6 +13,9 @@
 #action_endpoint:
 #  url: "http://localhost:5055/webhook"
 
+action_endpoint:
+  url: "https://fuzzy-computing-machine-pj4r5xwxg9xvf77g4-1880.app.github.dev/actionserver"
+
 # Tracker store which is used to store the conversations.
 # By default the conversations are stored in memory.
 # https://rasa.com/docs/rasa/tracker-stores
@@ -40,3 +43,4 @@
 #  username: username
 #  password: password
 #  queue: queue
+
