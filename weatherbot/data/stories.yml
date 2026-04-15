@@ -3,13 +3,13 @@ version: "3.1"
 stories:
   - story: "1"
     steps:
-      - intent: inform_weather
+      - intent: inform_weather_de
         entities:
           - GPE: Kempten
       - slot_was_set:
         - location: Kempten
-      - action: action_weather
-      - action: utter_location
+      - action: action_weather_de
+      - action: utter_location_de
 
   - story: "2"
     steps:
@@ -92,14 +92,14 @@ stories:
 
   - story: "10"
     steps:
-      - intent: inform_generally
-      - action: utter_ask_location
-      - intent: tell_location
+      - intent: inform_generally_de
+      - action: utter_ask_location_de
+      - intent: tell_location_de
         entities:
           - GPE: Munich
       - slot_was_set:
         - location: Munich
-      - action: action_generalinfo
+      - action: action_generalinfo_de
 
   - story: "11"
     steps:

@@ -7,10 +7,20 @@ rules:
   - intent: goodbye
   - action: utter_goodbye
 
+- rule: "Sage 'Auf Wiedersehen' immer, wenn der Benutzer sich verabschiedet und 'Tschüss' sagt"
+  steps:
+  - intent: goodbye_de
+  - action: utter_goodbye_de  
+
 - rule: "Greeting rule"
   steps:
   - intent: greet
   - action: utter_greet
+
+- rule: "Begrüßungsregel"
+  steps:
+  - intent: greet_de
+  - action: utter_greet_de    
 
 - rule: "fallback"
   steps:

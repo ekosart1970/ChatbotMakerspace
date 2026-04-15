@@ -29,7 +29,9 @@ slots:
 
 actions:
   - action_generalinfo
+  - action_generalinfo_de
   - action_weather
+  - action_weather_de
 
 responses:
   utter_greet:
