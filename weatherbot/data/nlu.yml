@@ -10,6 +10,14 @@ nlu:
       - heya
       - howdy
       - hey there
+  - intent: greet_de
+    examples: |
+      - Hallo
+      - Guten Tag
+      - Hi
+      - Servus
+      - Grüß Gott
+      - Moin  
 
   - intent: goodbye
     examples: |
@@ -18,6 +26,12 @@ nlu:
       - bye bye
       - see ya
       - see you later
+  - intent: goodbye_de
+    examples: |
+      - Tschüss
+      - Auf Wiedersehen
+      - Bis bald
+      - Schönen Tag noch
 
   - intent: inform_weather
     examples: |
@@ -38,6 +52,25 @@ nlu:
       - Can you tell me the weather?
       - Tell me the weather in [Kempten](GPE)
       - The weather condition in [Italy](GPE)
+  - intent: inform_weather_de
+    examples: |
+      - Wie ist das Wetter in [Berlin](GPE) im Moment?
+      - Wie ist das Wetter heute?
+      - Wie ist das Wetter in [London](GPE) heute?
+      - Zeig mir das Wetter in [Paris](GPE)
+      - Zeig mir das Wetter in [Santa Barbara](GPE)
+      - Sag mir das Wetter in [South Africa](GPE)
+      - Ich frage mich, wie das Wetter in [Kempten](GPE) gerade ist?
+      - Wie ist das Wetter?
+      - Sag mir das Wetter
+      - Wie ist das Wetter
+      - Ist das Wetter schön in [Barcelona](GPE) heute?
+      - Ich gehe heute nach [London](GPE) und frage mich, wie das Wetter dort draußen ist?
+      - Ich plane meine Reise nach [Amsterdam](GPE). Wie ist das Wetter dort draußen?
+      - Zeig mir bitte das Wetter in [Dublin](GPE)
+      - Kannst du mir das Wetter sagen?
+      - Sag mir das Wetter in [Kempten](GPE)
+      - Die Wetterlage in [Italy](GPE)  
 
   - intent: tell_location
     examples: |
@@ -55,6 +88,22 @@ nlu:
       - Oh, sorry, in [Italy](GPE)
       - I mean in [Kempten](GPE)
       - I mean in [South Africa](GPE)
+  - intent: tell_location_de
+    examples: |
+      - über [Berlin](GPE)
+      - über [New York](GPE)
+      - [London](GPE)
+      - [San Jose]
+      - [Puerto Rico]
+      - [Amsterdam](GPE)
+      - über [Munich](GPE)
+      - in [Munich](GPE)
+      - für [Senegal](GPE)
+      - über [Namibia](GPE)
+      - [France](GPE)
+      - Oh, sorry, in [Italy](GPE)
+      - Ich meine in [Kempten](GPE)
+      - Ich meine in [South Africa](GPE)
 
   - intent: inform_generally
     examples: |
@@ -74,3 +123,22 @@ nlu:
       - Can you give some information
       - Can you give more information
       - Do you have more information
+  - intent: inform_generally_de
+    examples: |
+      - Sag mir mehr über [Berlin](GPE)
+      - Wie ist [London](GPE)
+      - Zeig mir [Amsterdam](GPE)
+      - Ich frage mich, wie [Bangalore](GPE) ist
+      - Ich frage mich, wie [San Diego](GPE) ist
+      - Kannst du mir mehr von [Barcelona](GPE) zeigen?
+      - Kannst du mir etwas über [Graz](GPE) erzählen?
+      - info zu [Munich](GPE)
+      - Ich möchte mehr über [Senegal](GPE) wissen
+      - Ich möchte etwas über [Namibia](GPE) wissen
+      - Ich möchte etwas über [Gran Canaria](GPE) wissen
+      - Erzähl mir über [France](GPE)
+      - Ich brauche Informationen
+      - Kannst du mir einige Informationen geben
+      - Kannst du mir mehr Informationen geben
+      - Hast du mehr Informationen  
+      

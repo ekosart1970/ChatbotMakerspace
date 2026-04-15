@@ -6,10 +6,15 @@ session_config:
 
 intents:
   - inform_weather
+  - inform_weather_de
   - tell_location
+  - tell_location_de
   - inform_generally
+  - inform_generally_de
   - goodbye
+  - goodbye_de
   - greet
+  - greet_de
 
 entities:
   - GPE
@@ -29,15 +34,38 @@ actions:
 responses:
   utter_greet:
     - text: "Hello! How can I help?"
+  utter_greet_de:
+    - text: "Hallo! Wie kann ich helfen?"
+
   utter_ask_location:
     - text: "For what location?"
     - text: "Which location?"
+  utter_ask_location_de:
+    - text: "Für welchen Ort ?" 
+    - text: "Welche Ort haben Sie im Sinn?"
+
   utter_goodbye:
     - text: "Bye bye!"
     - text: "see you again!"
     - text: "have a nice day!"
+  utter_goodbye_de:
+    - text: "Tschüss!"
+    - text: "Bis bald!"
+    - text: "Schönen Tag noch!"
+
   utter_location:
     - text: "{location} is a nice place!"
     - text: "I really like {location}!"
     - text: "Oh {location}! I always enjoy being there!"
     - text: "I wish I can visit {location} someday."
+
+  utter_location_de:
+    - text: "{location} ist ein schöner Ort!"
+    - text: "Ich mag {location} wirklich gerne!"
+    - text: "Oh {location}! Ich genieße es immer dort zu sein!"
+    - text: "Ich wünschte, ich könnte {location} eines Tages besuchen."
+
+  utter_default:
+    - text: "Sorry, I didn't get that, can you rephrase?"
+  utter_default_de:
+    - text: "Entschuldigung, das habe ich nicht verstanden, können Sie das umformulieren?"
