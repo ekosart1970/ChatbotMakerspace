@@ -1,0 +1,1247 @@
+[
+    {
+        "id": "b8c2f86bf92cfcdd",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "bf5ede2065af4a6e",
+        "type": "tab",
+        "label": "Flow 2",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "fba824615fea9fb9",
+        "type": "tab",
+        "label": "Flow 2-v1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "c9ceba6e58a2450d",
+        "type": "tab",
+        "label": "Flow 3",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "f3fd6a1bdc0784e3",
+        "type": "tab",
+        "label": "Flow 4",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "a7775a240e033f39",
+        "type": "tab",
+        "label": "Flow 5",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "551c8e71f471082b",
+        "type": "http in",
+        "z": "b8c2f86bf92cfcdd",
+        "name": "",
+        "url": "/webhook",
+        "method": "get",
+        "upload": false,
+        "skipBodyParsing": false,
+        "swaggerDoc": "",
+        "x": 180,
+        "y": 380,
+        "wires": [
+            [
+                "a3f6674a6042b44d"
+            ]
+        ]
+    },
+    {
+        "id": "a3f6674a6042b44d",
+        "type": "change",
+        "z": "b8c2f86bf92cfcdd",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "Glückwunsch es funktioniert!",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 410,
+        "y": 380,
+        "wires": [
+            [
+                "a2425bebe156b678"
+            ]
+        ]
+    },
+    {
+        "id": "a2425bebe156b678",
+        "type": "http response",
+        "z": "b8c2f86bf92cfcdd",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 610,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "ad50b18fb3183332",
+        "type": "http in",
+        "z": "bf5ede2065af4a6e",
+        "name": "",
+        "url": "/meinflow",
+        "method": "get",
+        "upload": false,
+        "skipBodyParsing": false,
+        "swaggerDoc": "",
+        "x": 370,
+        "y": 380,
+        "wires": [
+            [
+                "97dc14773dec2e05",
+                "71ccf4ad2a14cfa2"
+            ]
+        ]
+    },
+    {
+        "id": "6071b99c1ca97a9b",
+        "type": "template",
+        "z": "bf5ede2065af4a6e",
+        "name": "Anrede Mann",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "Glückwunsch, lieber {{payload.vorname}}\n{{payload.name}}! \nDas funktioniert ja ganz {{payload.lob}}! ",
+        "output": "str",
+        "x": 860,
+        "y": 320,
+        "wires": [
+            [
+                "866e65347cc8ca99",
+                "8b51c3f3845ffe70"
+            ]
+        ]
+    },
+    {
+        "id": "866e65347cc8ca99",
+        "type": "http response",
+        "z": "bf5ede2065af4a6e",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 1130,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "97dc14773dec2e05",
+        "type": "debug",
+        "z": "bf5ede2065af4a6e",
+        "name": "debug 6",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 500,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "8b51c3f3845ffe70",
+        "type": "debug",
+        "z": "bf5ede2065af4a6e",
+        "name": "debug 7",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 980,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "71ccf4ad2a14cfa2",
+        "type": "switch",
+        "z": "bf5ede2065af4a6e",
+        "name": "",
+        "property": "payload.mwd",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "Mann",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "Frau",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 3,
+        "x": 630,
+        "y": 380,
+        "wires": [
+            [
+                "6071b99c1ca97a9b"
+            ],
+            [
+                "555577a772271f69"
+            ],
+            [
+                "ef9db72e7c3fa62d"
+            ]
+        ]
+    },
+    {
+        "id": "555577a772271f69",
+        "type": "template",
+        "z": "bf5ede2065af4a6e",
+        "name": "Anrede Frau",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "Glückwunsch, liebe {{payload.vorname}}\n{{payload.name}}! \nDas funktioniert ja ganz {{payload.lob}}! ",
+        "output": "str",
+        "x": 850,
+        "y": 400,
+        "wires": [
+            [
+                "8b86da741d8ae114",
+                "e894087083d230a7"
+            ]
+        ]
+    },
+    {
+        "id": "8b86da741d8ae114",
+        "type": "http response",
+        "z": "bf5ede2065af4a6e",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 1130,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "e894087083d230a7",
+        "type": "debug",
+        "z": "bf5ede2065af4a6e",
+        "name": "debug 8",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1000,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "66a362d3b0fc8cf8",
+        "type": "http response",
+        "z": "bf5ede2065af4a6e",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 1070,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "ccb170ad4e16308e",
+        "type": "debug",
+        "z": "bf5ede2065af4a6e",
+        "name": "debug 9",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1000,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "ef9db72e7c3fa62d",
+        "type": "template",
+        "z": "bf5ede2065af4a6e",
+        "name": "Anrede Kind",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "Glückwunsch, liebes {{payload.vorname}}\n{{payload.name}}! \nDas funktioniert ja ganz {{payload.lob}}! ",
+        "output": "str",
+        "x": 850,
+        "y": 480,
+        "wires": [
+            [
+                "66a362d3b0fc8cf8",
+                "ccb170ad4e16308e"
+            ]
+        ]
+    },
+    {
+        "id": "d796bf3a0d69b84b",
+        "type": "http in",
+        "z": "fba824615fea9fb9",
+        "name": "",
+        "url": "/bravoflow",
+        "method": "get",
+        "upload": false,
+        "skipBodyParsing": false,
+        "swaggerDoc": "",
+        "x": 160,
+        "y": 80,
+        "wires": [
+            [
+                "8964e21a06872330"
+            ]
+        ]
+    },
+    {
+        "id": "6ae5568286dfad21",
+        "type": "http response",
+        "z": "fba824615fea9fb9",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 610,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "8964e21a06872330",
+        "type": "template",
+        "z": "fba824615fea9fb9",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "Glückwunsch, liebe {{payload.vorname}} {{payload.name}}! Das funktioniert ja ganz {{payload.bravo}}!",
+        "output": "str",
+        "x": 380,
+        "y": 80,
+        "wires": [
+            [
+                "6ae5568286dfad21"
+            ]
+        ]
+    },
+    {
+        "id": "0214d6adddb121e0",
+        "type": "comment",
+        "z": "fba824615fea9fb9",
+        "name": "Aktivieren!",
+        "info": "\nÖffne den Startknoten und aktiviere ihn mit der Schaltfläche unten links.\n",
+        "x": 160,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "1c498ec1a8adfea2",
+        "type": "inject",
+        "z": "c9ceba6e58a2450d",
+        "d": true,
+        "name": "",
+        "props": [
+            {
+                "p": "payload.location",
+                "v": "Paris",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 310,
+        "y": 120,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f65f9a828254acd4",
+        "type": "http request",
+        "z": "c9ceba6e58a2450d",
+        "name": "",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 690,
+        "y": 580,
+        "wires": [
+            [
+                "9eceb60a07b782c6",
+                "b2f0683e6dd1cce7"
+            ]
+        ]
+    },
+    {
+        "id": "9eceb60a07b782c6",
+        "type": "debug",
+        "z": "c9ceba6e58a2450d",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload.places[0][\"post code\"]",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 840,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "e31b86222b75bcb9",
+        "type": "template",
+        "z": "c9ceba6e58a2450d",
+        "name": "URL",
+        "field": "url",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "https://api.openweathermap.org/data/2.5/weather?q={{payload.location}}&appid=2d700009fe0e1503255bea6aa4af3b13&units=metric",
+        "output": "str",
+        "x": 470,
+        "y": 580,
+        "wires": [
+            [
+                "f65f9a828254acd4"
+            ]
+        ]
+    },
+    {
+        "id": "c492edf6c9f7406f",
+        "type": "debug",
+        "z": "c9ceba6e58a2450d",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1100,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "b2f0683e6dd1cce7",
+        "type": "template",
+        "z": "c9ceba6e58a2450d",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "Das Wetter in {{payload.name}} \nist {{payload.weather.0.description}}.\nDie Windgeschwindigkeit beträgt {{payload.wind.speed}} Meter/Sec und \ndie Luftfeuchtigkeit {{payload.main.humidity}} %.\nDie Temperatur beträgt aktuell {{payload.main.temp}} Grad C.\n",
+        "output": "str",
+        "x": 900,
+        "y": 580,
+        "wires": [
+            [
+                "c492edf6c9f7406f"
+            ]
+        ]
+    },
+    {
+        "id": "36f5fe1a706054e0",
+        "type": "http in",
+        "z": "c9ceba6e58a2450d",
+        "name": "",
+        "url": "/actionserver",
+        "method": "get",
+        "upload": false,
+        "skipBodyParsing": false,
+        "swaggerDoc": "",
+        "x": 250,
+        "y": 580,
+        "wires": [
+            [
+                "e31b86222b75bcb9"
+            ]
+        ]
+    },
+    {
+        "id": "60627363121a2884",
+        "type": "template",
+        "z": "f3fd6a1bdc0784e3",
+        "name": "URL-Wettermap",
+        "field": "url",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "https://api.openweathermap.org/data/2.5/weather?q={{slots.location}}&appid=2d700009fe0e1503255bea6aa4af3b13&units=metric",
+        "output": "str",
+        "x": 640,
+        "y": 320,
+        "wires": [
+            [
+                "1ebf6fbd89811e10",
+                "614a0e3790ee6b6c"
+            ]
+        ]
+    },
+    {
+        "id": "4fcc99dbea0b8d3c",
+        "type": "template",
+        "z": "f3fd6a1bdc0784e3",
+        "d": true,
+        "name": "Ausgabe-Text",
+        "field": "payload.text",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "Das Wetter in {{payload.name}} ist {{payload.weather.0.description}}.\nDie Windgeschwindigkeit beträgt {{payload.wind.speed}} m/sec.\nDie Temperatur beträgt momentan {{payload.main.temp}} Grad Celsius und\ndie Luftfeuchtigkeit {{payload.main.humidity}}%.",
+        "output": "str",
+        "x": 1160,
+        "y": 180,
+        "wires": [
+            [
+                "57a56b5ba56a4d67"
+            ]
+        ]
+    },
+    {
+        "id": "1ebf6fbd89811e10",
+        "type": "http request",
+        "z": "f3fd6a1bdc0784e3",
+        "name": "",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 810,
+        "y": 320,
+        "wires": [
+            [
+                "63d6f26e2d97e2fc"
+            ]
+        ]
+    },
+    {
+        "id": "dee790f801b61392",
+        "type": "debug",
+        "z": "f3fd6a1bdc0784e3",
+        "name": "debug 4",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 280,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "57a56b5ba56a4d67",
+        "type": "debug",
+        "z": "f3fd6a1bdc0784e3",
+        "name": "debug 5",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1160,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "66b64d94d0b17530",
+        "type": "http in",
+        "z": "f3fd6a1bdc0784e3",
+        "name": "",
+        "url": "/actionserver",
+        "method": "post",
+        "upload": false,
+        "skipBodyParsing": false,
+        "swaggerDoc": "",
+        "x": 110,
+        "y": 320,
+        "wires": [
+            [
+                "dee790f801b61392",
+                "27fe871dc60ca6ba"
+            ]
+        ]
+    },
+    {
+        "id": "19620b9a85bc6e5a",
+        "type": "http response",
+        "z": "f3fd6a1bdc0784e3",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 1650,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "27fe871dc60ca6ba",
+        "type": "init",
+        "z": "f3fd6a1bdc0784e3",
+        "name": "",
+        "x": 290,
+        "y": 320,
+        "wires": [
+            [
+                "84d3c919f6a57828"
+            ]
+        ]
+    },
+    {
+        "id": "329aa0303b0ad7e6",
+        "type": "finish",
+        "z": "f3fd6a1bdc0784e3",
+        "name": "",
+        "x": 1510,
+        "y": 400,
+        "wires": [
+            [
+                "19620b9a85bc6e5a"
+            ]
+        ]
+    },
+    {
+        "id": "a61fb366132dcb58",
+        "type": "simrasa",
+        "z": "f3fd6a1bdc0784e3",
+        "d": true,
+        "name": "",
+        "action": "",
+        "errtocatch": false,
+        "slots": [
+            {
+                "slotname": "",
+                "slotname-type": "str",
+                "slotvalue": "",
+                "slotvalue-type": "str"
+            }
+        ],
+        "x": 90,
+        "y": 440,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "614a0e3790ee6b6c",
+        "type": "debug",
+        "z": "f3fd6a1bdc0784e3",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 780,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "b474082ea7798b46",
+        "type": "sendextra",
+        "z": "f3fd6a1bdc0784e3",
+        "name": "Text und Icon",
+        "position": "0",
+        "positionType": "num",
+        "text": "payload.choices[0].message.content",
+        "textType": "msg",
+        "image": "weathericon",
+        "imageType": "msg",
+        "attachment": "",
+        "attachmentType": "str",
+        "senderr": true,
+        "x": 1330,
+        "y": 400,
+        "wires": [
+            [
+                "329aa0303b0ad7e6",
+                "fe864c3e0f69b4f0"
+            ]
+        ]
+    },
+    {
+        "id": "63d6f26e2d97e2fc",
+        "type": "template",
+        "z": "f3fd6a1bdc0784e3",
+        "name": "Wetter-Icon",
+        "field": "payload.weathericon",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "https://raw.githubusercontent.com/weberi/weather-icons-lite/refs/heads/master/images/{{payload.weather.0.icon}}.jpg",
+        "output": "str",
+        "x": 990,
+        "y": 320,
+        "wires": [
+            [
+                "3f04e8604a239249",
+                "eeb327483d4bf53c"
+            ]
+        ]
+    },
+    {
+        "id": "84d3c919f6a57828",
+        "type": "switch",
+        "z": "f3fd6a1bdc0784e3",
+        "name": "",
+        "property": "action",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "action_weather",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "action_generalinfo",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 450,
+        "y": 360,
+        "wires": [
+            [
+                "60627363121a2884"
+            ],
+            [
+                "a6328ea26599f9fb"
+            ]
+        ]
+    },
+    {
+        "id": "a6328ea26599f9fb",
+        "type": "template",
+        "z": "f3fd6a1bdc0784e3",
+        "name": "URL-Wikipedia",
+        "field": "url",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "https://en.wikipedia.org/w/api.php?action=opensearch&limit=1&namespace=0&format=json&search={{slots.location}}",
+        "output": "str",
+        "x": 640,
+        "y": 520,
+        "wires": [
+            [
+                "12034d048d7342d9",
+                "5a87fa5b6f165acc"
+            ]
+        ]
+    },
+    {
+        "id": "12034d048d7342d9",
+        "type": "http request",
+        "z": "f3fd6a1bdc0784e3",
+        "name": "",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 810,
+        "y": 520,
+        "wires": [
+            [
+                "6e94963f4e0989c8",
+                "0821212f56052e30"
+            ]
+        ]
+    },
+    {
+        "id": "6e94963f4e0989c8",
+        "type": "sendextra",
+        "z": "f3fd6a1bdc0784e3",
+        "name": "Info",
+        "position": "0",
+        "positionType": "num",
+        "text": "Hier finden Sie mehr Informationen:",
+        "textType": "str",
+        "image": "",
+        "imageType": "str",
+        "attachment": "payload[3][0]",
+        "attachmentType": "msg",
+        "senderr": true,
+        "x": 1330,
+        "y": 520,
+        "wires": [
+            [
+                "48960348a680df02",
+                "793f9b7f2c6338d8"
+            ]
+        ]
+    },
+    {
+        "id": "48960348a680df02",
+        "type": "finish",
+        "z": "f3fd6a1bdc0784e3",
+        "name": "",
+        "x": 1530,
+        "y": 520,
+        "wires": [
+            [
+                "9f44227b5cccef15"
+            ]
+        ]
+    },
+    {
+        "id": "9f44227b5cccef15",
+        "type": "http response",
+        "z": "f3fd6a1bdc0784e3",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 1670,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "5a87fa5b6f165acc",
+        "type": "debug",
+        "z": "f3fd6a1bdc0784e3",
+        "name": "debug 10",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 740,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "0821212f56052e30",
+        "type": "debug",
+        "z": "f3fd6a1bdc0784e3",
+        "name": "debug 11",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 960,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "793f9b7f2c6338d8",
+        "type": "debug",
+        "z": "f3fd6a1bdc0784e3",
+        "name": "debug 12",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1500,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "3f04e8604a239249",
+        "type": "change",
+        "z": "f3fd6a1bdc0784e3",
+        "name": "JSON in Text",
+        "rules": [
+            {
+                "t": "set",
+                "p": "weather",
+                "pt": "msg",
+                "to": "$string(payload)",
+                "tot": "jsonata"
+            },
+            {
+                "t": "set",
+                "p": "weathericon",
+                "pt": "msg",
+                "to": "payload.weathericon",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1230,
+        "y": 320,
+        "wires": [
+            [
+                "8ddeb2d1c3917a32",
+                "4557ef1e011a2e96"
+            ]
+        ]
+    },
+    {
+        "id": "8ddeb2d1c3917a32",
+        "type": "prompt",
+        "z": "f3fd6a1bdc0784e3",
+        "name": "",
+        "messages": [
+            {
+                "role": "system",
+                "content": "You are a weather bot.",
+                "content-type": "str"
+            },
+            {
+                "role": "user",
+                "content": "You will be provided with weather data including the user's timezone. First, calculate the user's current time based on the provided timezone. Then summarize the key weather details in a friendly, concise and clear message. Tailor the tone of your response based on the current time of day in the user's timezone as provided without explicitly mentioning the timezone. Avoid adding any weather details beyond the ones provided in the input. Include a relevant and friendly remark based on the weather, such as a suggestion for activities or clothing. Output language should be German.",
+                "content-type": "str"
+            },
+            {
+                "role": "user",
+                "content": "weather",
+                "content-type": "msg"
+            }
+        ],
+        "x": 1480,
+        "y": 320,
+        "wires": [
+            [
+                "9549091e6f8ef4c1"
+            ]
+        ]
+    },
+    {
+        "id": "9549091e6f8ef4c1",
+        "type": "croq",
+        "z": "f3fd6a1bdc0784e3",
+        "name": "",
+        "apiKey": "",
+        "apiEndpoint": "/openai/v1/chat/completions",
+        "defaultModel": "groq/compound-mini",
+        "defaultTemperature": 0.7,
+        "defaultMaxTokens": 1024,
+        "x": 1630,
+        "y": 320,
+        "wires": [
+            [
+                "b474082ea7798b46",
+                "f73e5a9c9d9ed7cf"
+            ]
+        ]
+    },
+    {
+        "id": "eeb327483d4bf53c",
+        "type": "debug",
+        "z": "f3fd6a1bdc0784e3",
+        "name": "debug 16",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 1120,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "4557ef1e011a2e96",
+        "type": "debug",
+        "z": "f3fd6a1bdc0784e3",
+        "name": "debug 17",
+        "active": true,
+        "tosidebar": true,
+        "console": true,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 1390,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "f73e5a9c9d9ed7cf",
+        "type": "debug",
+        "z": "f3fd6a1bdc0784e3",
+        "name": "debug 18",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1760,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "fe864c3e0f69b4f0",
+        "type": "debug",
+        "z": "f3fd6a1bdc0784e3",
+        "name": "debug 19",
+        "active": true,
+        "tosidebar": true,
+        "console": true,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 1410,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "5812b2e32bb582d8",
+        "type": "croq",
+        "z": "a7775a240e033f39",
+        "name": "",
+        "apiKey": "",
+        "apiEndpoint": "/openai/v1/chat/completions",
+        "defaultModel": "groq/compound-mini",
+        "defaultTemperature": 0.7,
+        "defaultMaxTokens": 1024,
+        "x": 610,
+        "y": 380,
+        "wires": [
+            [
+                "a248ebc955ae2392",
+                "93b2c2d11f20d353"
+            ]
+        ]
+    },
+    {
+        "id": "1e03be0c2c000962",
+        "type": "inject",
+        "z": "a7775a240e033f39",
+        "name": "",
+        "props": [
+            {
+                "p": "weather",
+                "v": "{     \"coord\": {         \"lon\": 2.3488,         \"lat\": 48.8534     },     \"weather\": [         {             \"id\": 804,             \"main\": \"Clouds\",             \"description\": \"overcast clouds\",             \"icon\": \"04n\"         }     ],     \"base\": \"stations\",     \"main\": {         \"temp\": 5.09,         \"feels_like\": 1.38,         \"temp_min\": 4.1,         \"temp_max\": 5.6,         \"pressure\": 1030,         \"humidity\": 81,         \"sea_level\": 1030,         \"grnd_level\": 1020     },     \"visibility\": 10000,     \"wind\": {         \"speed\": 5.14,         \"deg\": 70     },     \"clouds\": {         \"all\": 100     },     \"dt\": 1733952313,     \"sys\": {         \"type\": 2,         \"id\": 2012208,         \"country\": \"FR\",         \"sunrise\": 1733902460,         \"sunset\": 1733932434     },     \"timezone\": 3600,     \"id\": 2988507,     \"name\": \"Paris\",     \"cod\": 200 }",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 210,
+        "y": 380,
+        "wires": [
+            [
+                "e290dbe2f37c5dbb"
+            ]
+        ]
+    },
+    {
+        "id": "e290dbe2f37c5dbb",
+        "type": "prompt",
+        "z": "a7775a240e033f39",
+        "name": "",
+        "messages": [
+            {
+                "role": "system",
+                "content": "You are a weather bot.",
+                "content-type": "str"
+            },
+            {
+                "role": "user",
+                "content": "You will be provided with weather data including the user's timezone. First, calculate the user's current time based on the provided timezone. Then summarize the key weather details in a friendly, concise and clear message. Tailor the tone of your response based on the current time of day in the user's timezone as provided without explicitly mentioning the timezone. Avoid adding any weather details beyond the ones provided in the input. Include a relevant and friendly remark based on the weather, such as a suggestion for activities or clothing.",
+                "content-type": "str"
+            },
+            {
+                "role": "user",
+                "content": "weather",
+                "content-type": "msg"
+            }
+        ],
+        "x": 400,
+        "y": 380,
+        "wires": [
+            [
+                "5812b2e32bb582d8",
+                "400f27106c7e8285"
+            ]
+        ]
+    },
+    {
+        "id": "a248ebc955ae2392",
+        "type": "debug",
+        "z": "a7775a240e033f39",
+        "name": "Ausgabe",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload.choices[0].message.content",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 680,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "400f27106c7e8285",
+        "type": "debug",
+        "z": "a7775a240e033f39",
+        "name": "debug 13",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 500,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "93b2c2d11f20d353",
+        "type": "debug",
+        "z": "a7775a240e033f39",
+        "name": "debug 14",
+        "active": true,
+        "tosidebar": true,
+        "console": true,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 830,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "5dc3066ba46d37e0",
+        "type": "models",
+        "z": "a7775a240e033f39",
+        "name": "",
+        "apiKey": "",
+        "apiEndpoint": "https://api.groq.com/openai/v1/models",
+        "x": 590,
+        "y": 760,
+        "wires": [
+            [
+                "b4e3e22ec5e26f43"
+            ]
+        ]
+    },
+    {
+        "id": "b4e3e22ec5e26f43",
+        "type": "debug",
+        "z": "a7775a240e033f39",
+        "name": "debug 15",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 820,
+        "y": 780,
+        "wires": []
+    },
+    {
+        "id": "12c5f490ac801ca9",
+        "type": "global-config",
+        "env": [],
+        "modules": {
+            "node-red-contrib-rasa-actionserver": "1.3.1",
+            "node-red-contrib-croq-api": "1.0.0"
+        }
+    }
+]
